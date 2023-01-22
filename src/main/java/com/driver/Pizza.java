@@ -3,6 +3,7 @@ package com.driver;
 public class Pizza {
     int che=0;
     int top=0;
+    int billi=0;
 int paper =0;
     private int price;
     private Boolean isVeg;
@@ -60,7 +61,11 @@ int paper =0;
 
     public String getBill(){
         // your code goes here
-        bill+="Total Price:"+price+"\n";
+        if(billi==0){
+            bill+="Total Price: "+price+"\n";
+            billi=1;
+        }
+
         return this.bill;
     }
 }
