@@ -2,6 +2,7 @@ package com.driver;
 
 public class Pizza {
     int che=0;
+    int top=0;
 int paper =0;
     private int price;
     private Boolean isVeg;
@@ -28,6 +29,7 @@ int paper =0;
         if (che==0){
             bill+="Extra Cheese Added: 80\n";
             price+=80;
+            che=1;
         }
 
 
@@ -35,12 +37,14 @@ int paper =0;
 
     public void addExtraToppings(){
         // your code goes here
-        if(isVeg==true &&che==0){
+        if(isVeg==true &&top==0){
             bill+="Extra Toppings Added: 70\n";
             price+=70;
-        }else if(che==0){
+            top=1;
+        }else if(top==0){
             bill+="Extra Toppings Added: 120\n";
             price+=120;
+            top=1;
         }
     }
 
